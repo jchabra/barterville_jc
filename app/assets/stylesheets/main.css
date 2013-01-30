@@ -1,0 +1,70 @@
+@import url(http://fonts.googleapis.com/css?family=Unkempt:700);
+@import url(http://fonts.googleapis.com/css?family=Varela+Round);
+
+
+/*======================= MAIN LAYOUT ==================== */
+
+body {
+  font-family: 'Varela Round', sans-serif;
+}
+
+h3, h4 {
+  margin-left: 20px;
+}
+
+footer {
+  text-align: right;
+  background: #E6E6E6;
+  padding-top: 20px;
+  height: 200px;
+  margin-top: 20px;
+}
+
+/*======================= HOME PAGE ==================== */
+
+.home {
+	font-family: 'Unkempt', 'Lucida Sans', sans-serif;
+  font-size: 28px !important;
+	margin-bottom: 30px;
+	color: #F5FBFB !important;
+  text-shadow: none !important;
+}
+
+.home_image {
+  margin-top: -10px;
+}
+
+/*======================= NAV ==================== */
+
+.nav-bkgd {
+  background: #354C5D; 
+  font-family: 'Varela Round', sans-serif;
+  font-size: 15px;
+  height: 40px;
+}
+
+.right_links {
+  margin-right: -10px;
+}
+
+.navbar .nav > li > a {
+  color: #F5FBFB !important;
+  text-shadow: none;
+}
+
+.navbar .nav > .active > a, .navbar .nav > .active > a:hover {
+  background-color: #9DBAC2; 
+  color: #354C5D !important;
+}
+
+.align_right {
+  float: right !important;
+}
+
+/*======================= MISC ==================== */
+
+.button {
+	margin-top: 24px;
+}
+
+

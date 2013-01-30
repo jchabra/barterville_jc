@@ -1,0 +1,15 @@
+<% content_for :title, "View User - #{@user.username}" %>
+
+<div class="product">
+	<div class="clipped-image">
+		<%= image_tag @user.photo %>
+	</div>
+	<div class="product-details">
+	<h2><%= @user.username %></h2>
+		<span><%= @user.first_name %> <%= @user.last_name %></span> 
+		<span>Zip Code: <%= @user.zip %></span> 
+		<span>Bio: <%= @user.bio %></span> 
+		<span><%= edit_profile_link %></span>
+	</div>
+</div>
+

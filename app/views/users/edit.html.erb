@@ -1,0 +1,9 @@
+<% content_for :title, "Edit Your Profile" %>
+
+<h3>Edit User</h3>
+
+<%= render 'form' %>
+
+<span id="delete-user" class="span3">
+	<%= link_to "Delete User", user_path(@user), :confirm => "Are You Sure?", :method => :delete %>
+</span>

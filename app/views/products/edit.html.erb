@@ -1,0 +1,6 @@
+<% content_for :title, "Edit Your Product" %>
+<%= render 'form' %>
+
+<span id="delete-product" class="span3">
+	<%= link_to "Delete Product", product_path(@product), :confirm => "Are You Sure?", :method => :delete %>
+</span>

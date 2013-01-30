@@ -1,0 +1,17 @@
+<% content_for :title, "View Product - #{@product_name}" %>
+
+<div class="product">
+	<div class="clipped-image">
+		<%= image_tag @product.photo_url %>
+	</div>
+	<div class="product-details">
+		<h2><%= @product_name %></h2>
+		<span id="product-owner">From: <%= edit_or_from_link %></span>
+		<span id="product-condition">Condition: <%= @product_condition.titleize %></span>
+		<span id="product-added">Added: <%= time_ago_in_words(@product_added).titleize %> Ago</span>
+	</div>
+	<div class="product-description">
+		<%= @product_description %>
+	</div>
+	<%= trade_options %>
+</div>

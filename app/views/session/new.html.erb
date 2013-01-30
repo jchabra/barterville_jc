@@ -1,0 +1,27 @@
+<% content_for :title, "Login" %>
+
+<div class="row">
+<%= form_tag '/login' do %>
+  <div class="span3">
+    <%= label_tag 'Username' %>
+    <%= text_field_tag 'username' %>
+  </div>
+
+  <div class="span3">
+    <%= label_tag 'Password' %>
+    <%= password_field_tag 'password' %>
+  </div>
+
+  <div class="span6">
+      <%= submit_tag 'Login', :class => "btn btn-success button" %>
+  </div>
+
+<% end %>
+</div><!-- .row -->
+
+<div class ="row">
+  <div class="">
+    <h4>Don't have an account? 
+      <%= link_to 'Sign Up', new_user_path %>.</h4>
+  </div>
+</div>

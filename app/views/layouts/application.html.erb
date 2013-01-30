@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= yield(:title) %> - Barterville</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+
+<body>
+
+<div class="nav-bkgd">
+	<div class="container navbar">
+	  <a class="brand home" href="#">Barterville</a>
+	  <ul class="nav">
+	    <li><%= link_to "Home", root_path %></li>
+	    <li><%= link_to "Products", products_path %></li>
+	    <li><%= link_to "Users", users_path %></li>
+	  </ul><!-- end of list -->
+	   <div class="pull-right right_links">
+		   	<ul class="nav">
+		   		<li><%= notification_link %></li>
+			  	<li><%= user_nav_link %></li>
+					<li><%= login_or_logout_link %></li>
+			 	</ul><!-- end of nav list -->
+		 </div><!-- end of right_links -->
+	</div><!-- end of container and navbar -->
+</div><!--nav-bkgd-->
+
+<div class ="container">
+	<div class="row">
+		<div class="span12">
+			<%= yield %>
+		</div><!--.span12-->
+	</div><!--.row-->
+
+</div><!--.container-->
+
+	<footer>
+		<div class= "container">
+	 		Barterville &copy; 2012 
+		</div><!-- end of footer container -->
+	</footer>
+</body>
+</html>

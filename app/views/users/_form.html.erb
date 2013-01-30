@@ -1,0 +1,74 @@
+<div class="form-horizontal">
+  <%= form_for(@user) do |f| %>
+
+    <%= render :partial => 'shared/errors', :locals => {:object => @user} %>
+
+    <div class="control-group">
+      <%= f.label :username, :class => 'control-label' %><br />
+      <div class="controls">
+        <%= f.text_field :username %>
+      </div><!--.controls-->
+    </div><!--.control-group--> 
+
+    <div class="control-group">
+      <%= f.label :password, :class => 'control-label'%><br />
+      <div class="controls">
+        <%= f.password_field :password %>
+      </div><!--.controls-->
+    </div><!--.control-group--> 
+
+    <div class="control-group">
+      <%= f.label :password_confirmation, :class => 'control-label' %><br />
+      <div class="controls">
+        <%= f.password_field :password_confirmation %>
+      </div><!--.controls-->
+    </div><!--.control-group--> 
+
+    <div class="control-group">
+      <%= f.label "Email", :class => 'control-label' %><br />
+      <div class="controls">
+        <%= f.text_field :email %>
+      </div><!--.controls-->
+    </div><!--.control-group--> 
+
+    <div class="control-group">
+      <%= f.label :first_name, :class => 'control-label' %><br />
+      <div class="controls">
+        <%= f.text_field :first_name %>
+      </div><!--.controls-->
+    </div><!--.control-group--> 
+
+    <div class="control-group">
+      <%= f.label :last_name, :class => 'control-label' %><br />
+      <div class="controls">
+        <%= f.text_field :last_name %>
+      </div><!--.controls-->
+    </div><!--.control-group--> 
+
+    <div class="control-group">
+      <%= f.label :zip, "Zip Code:", :class => 'control-label' %><br />
+      <div class="controls">
+        <%= f.text_field :zip %>
+      </div><!--.controls-->
+    </div><!--.control-group--> 
+
+    <div class="control-group">
+      <%= f.label :bio, "Bio:", :class => 'control-label' %><br />
+      <div class="controls">
+        <%= f.text_area :bio %>
+      </div><!--.controls-->
+    </div><!--.control-group--> 
+
+    <div class="control-group">
+      <div class="field">
+        <%= f.label :photo %><br />
+        <%= f.file_field :photo %>
+      </div><!--.controls-->
+    </div><!--.control-group--> 
+
+    <div class="actions controls">
+      <%= f.submit :class => 'btn btn-primary' %>
+    </div><!-- actions controls--> 
+
+ <% end %><!--end of form for @user -->
+</div><!--.form-horizontal-->

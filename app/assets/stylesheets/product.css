@@ -1,0 +1,124 @@
+.clear {
+	clear: both;
+}
+
+/*
+=show styles
+*/
+
+div.product .clipped-image {
+	height: 100px;
+	overflow: hidden;
+	width: 100%
+}
+
+div.product-details {
+	border-left: 1px solid #aaa;
+	border-bottom: 1px solid #aaa;
+	padding-left: 5px;
+}
+
+div.product-details h2{
+	font-size: 66px;
+	line-height: 1;
+}
+
+div.product-details span{
+	display: block;
+}
+
+	div.product-details span:nth-of-type(n+2) {
+		font-style: italic;
+	}
+
+.product-description {
+	color: #96969f;
+	line-height: 1.2;
+	font-size: 36px;
+	font-style: italic;
+	margin: 20px 0 10px 25px;
+}
+
+	.product-description:before{
+		color: #ccc;
+		content: "“";
+		font-size: 64px;
+		line-height: .6;
+		margin-left: -24px;
+		vertical-align: -10px;
+	}
+
+/*
+=form styles
+*/
+
+#description-field textarea {
+	height: 200px;
+	width: 500px;
+}
+
+#delete-product {
+	font-size: 12px;
+}
+
+#delete-product a{
+	color: #F5384B;
+}
+
+.tradeable-products select {
+	width: 500px;
+}
+
+.product-trading h3.btn {
+	font-size: 18px;
+	text-align: center;
+	margin: 10px;
+	width: 680px;
+}
+
+/*
+=index styles (A lot of this is actually =_all_products styles)
+*/
+
+.my-product {
+	height: 60px;
+	overflow: hidden;
+}
+
+div.individual-product, div.individual-user {
+	border: 1px solid #fff;
+	height: 298px;
+	margin-bottom: 10px;
+	overflow: hidden;
+	width: 218px;
+}
+
+	div.individual-product:hover, div.individual-user:hover {
+		border: 1px dashed #ddd;
+	}
+
+.individual-product span.name, .individual-user span.name{
+	background: #eee;
+	display: block;
+}
+
+.individual-product span.user, .individual-user span.trades{
+	font-size: 10px;
+	font-style: italic;
+}
+
+.individual-product .product-overlay {
+	background: rgba(255,255,255,.8);
+	height: 278px;
+	position: absolute;
+	width: 218px;
+	z-index: 1;
+}
+
+	.individual-product .product-overlay:hover{
+		background: rgba(255,255,255, 0);
+	}
+
+	.individual-product:hover p{
+		opacity: 0;
+	}

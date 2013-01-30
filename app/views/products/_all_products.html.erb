@@ -1,0 +1,8 @@
+<div id="my_products" class="row">
+	<h3>My Products</h3>
+	<% @authenticated_user.products.each do |product| %>
+		<div class="span3 my-product">
+			<%= link_to truncate(product.name, :length => 50, :separator => ' '), product %>
+		</div>
+	<% end %>
+</div>

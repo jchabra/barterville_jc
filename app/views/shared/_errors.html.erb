@@ -1,0 +1,6 @@
+<ul class='errors'>
+  <% object.errors.full_messages.each do |error| %>
+  <!-- object applies to something with errors -->
+  <li><%= error %></li>
+  <% end %>
+</ul>

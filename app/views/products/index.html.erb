@@ -1,0 +1,11 @@
+<% content_for :title, "View All Products" %>
+
+<!--This will show the specific user's products-->
+<%= all_products_content %>
+
+<%= render 'shared/search' %>
+
+<div id="all-products" class="row">
+	<%= render :partial => 'products', :locals => { :products => @products } %>
+</div>
+

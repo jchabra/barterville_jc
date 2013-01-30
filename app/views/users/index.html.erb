@@ -1,0 +1,36 @@
+<% content_for :title, "All Users" %>
+<div class="row">
+	<div class="span12">
+		<h2>Top Users</h2>
+		<% @top_users.each do |user| %>
+		<% user_object = User.find(user[0]) %> <!--getting first value of the array (second is number of trades)-->
+			<div class="span3 individual-user">
+					<span class="name"><%= link_to truncate(user_object.username, :length => 25, :separator => ' '), user_object %></span>
+					<span class="trades">Trades: <%= user[1] %></span>
+			</div><!--individual-user-->
+		<% end %>
+	</div><!--.span12-->
+</div><!--.row-->
+<h3>Users</h3>
+<div class="row">
+	<div class="span12">
+		<table class="table table-striped">
+		  <tr>
+		    <th>First Name</th>
+		    <th>Last Name</th>
+		    <th>User Name</th>
+		    <th></th>
+		  </tr>
+
+			<% @users.each do |user| %>
+			<tr>
+				<td><%= user.first_name %></td>
+				<td><%= user.last_name %></td>
+				<td><%= user.username %></td>
+				<td><%= link_to 'Show', user %></td>
+			<% end %>
+		</table>
+	</div>
+</div>
+
+<div class="new_user"><%= link_to 'New User', new_user_path %></div>

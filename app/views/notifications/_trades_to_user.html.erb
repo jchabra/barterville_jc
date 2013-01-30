@@ -1,0 +1,22 @@
+<h3>Trades Proposed To You</h3>
+<% @to_notifications.each do |notification| %>
+<div class="proposed-trade <%= notification.open ? "open" : "closed" %>">
+	<% if notification.open %>
+		<div class="respond btn btn-danger reject-btn">
+		<%= link_to "Reject", reject_trade_path(:notification_id => Notification.find(notification.id).id) %>
+		</div><!--.reject-btn-->
+		<div class="respond btn btn-success accept-btn">
+				<%= link_to "Accept", accept_trade_path(:notification_id => Notification.find(notification.id).id) %>
+		</div><!--.accept-btn-->
+	<% else %>
+		<div class="respond btn btn-inverse closed-btn">
+			Closed
+		</div>
+	<% end %>
+	<ul>
+		<li>From: <%= link_to User.find(notification.from_user).username, User.find(notification.from_user) %></li>
+		<li>Their Product: <%= link_to Product.find(notification.from_product).name, Product.find(notification.from_product) %></li>
+		<li>Your Product: <%= link_to Product.find(notification.to_product).name, Product.find(notification.to_product) %></li>
+	</ul>
+</div>
+<% end %>

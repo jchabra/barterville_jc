@@ -1,0 +1,15 @@
+<h3>All Products</h3>
+<!--This will show all products. We need to change it so that it doesn't show the current user's products.-->
+	<% @all_products.each do |product| %>
+		<div class="span3 individual-product" style="background: url(<%= product.photo %>)">
+			<span class="name"><%= link_to truncate(product.name, :length => 25, :separator => ' '), product %></span>
+			<div class="product-overlay">
+				<span class="user">From: <%= User.find(product.user_id).username %></span>
+				<p class="description"><%= product.description %></p>
+			</div>
+		</div>
+	<% end %>
+	<div class="clear"></div>
+<div class = "pagination pagination-small">
+	<%= paginate @all_products %>
+</div><!-- pagination pagination-small --> 
