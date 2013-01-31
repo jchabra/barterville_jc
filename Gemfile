@@ -7,10 +7,11 @@ gem 'pg'
 gem 'ipsum'
 gem 'bcrypt-ruby'
 gem 'kaminari'
-gem 'fog'
+gem "fog", "~> 1.3.1"
 gem "aws-ses", "~> 0.4.4", :require => 'aws/ses'
 gem 'carrierwave'
 gem 'rmagick'
+gem 'faker'
 
 group :development do 
   gem 'pry-rails'
