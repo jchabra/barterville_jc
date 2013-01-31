@@ -1,12 +1,7 @@
-User.delete_allProduct.delete_all
-
-
-
-
+User.delete_all
+Product.delete_all
 
 zip_code = [11111, 11112, 11113, 11114, 11115]
-
-
 
 first_name = ['Aaron',
 
