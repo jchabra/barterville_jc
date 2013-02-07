@@ -1,5 +1,16 @@
-@import url(http://fonts.googleapis.com/css?family=Unkempt:700);
-@import url(http://fonts.googleapis.com/css?family=Varela+Round);
+@font-face {
+  font-family: 'Unkempt';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Unkempt Bold'), local('Unkempt-Bold'), url(http://themes.googleusercontent.com/static/fonts/unkempt/v4/l7ry4Z6jesX0kBGhwZVQr73hpw3pgy2gAi-Ip7WPMi0.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Varela Round';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Varela Round'), local('VarelaRound-Regular'), url(http://themes.googleusercontent.com/static/fonts/varelaround/v3/APH4jr0uSos5wiut5cpjrqRDOzjiPcYnFooOUGCOsRk.woff) format('woff');
+}
 
 
 /*======================= MAIN LAYOUT ==================== */
